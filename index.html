@@ -68,15 +68,31 @@
         }
         .logo-sub { font-weight: 700; font-size: 0.95rem; color: #fff; }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 0.6rem;
+        /* ✅ 6 rutor under loggan */
+        .top-boxes{
+            display:grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap:0.5rem;
+            width:100%;
+            max-width:var(--max-width);
+            margin-top:0.8rem;
         }
-
-        nav a { font-size: 0.85rem; color: var(--muted); }
+        .top-box{
+            background: var(--bg-card);
+            border:1px solid var(--border-soft);
+            padding:0.5rem 0.4rem;
+            border-radius:10px;
+            font-size:0.8rem;
+            color:var(--muted);
+            text-align:center;
+        }
+        .top-box:hover{
+            color:var(--text);
+            border-color:rgba(249,250,251,0.4);
+        }
+        @media(max-width:900px){
+            .top-boxes{ grid-template-columns: repeat(3,1fr); }
+        }
 
         .btn-primary {
             display: inline-flex;
@@ -241,13 +257,15 @@
         <div class="logo-location">TRYGG HEMHJÄLP</div>
         <div class="logo-sub">Städning · Sällskap · Enkel mat</div>
 
-        <nav>
-            <ul>
-                <li><a href="#start">Hem</a></li>
-                <li><a href="#tjanster">Tjänster</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+        <!-- ✅ 6 rutor -->
+        <div class="top-boxes">
+            <a href="index.html" class="top-box">Hem</a>
+            <a href="#tjanster" class="top-box">Tjänster</a>
+            <a href="prislista.html" class="top-box">Prislista</a>
+            <a href="#trygghet" class="top-box">Trygghet</a>
+            <a href="#jobb" class="top-box">Jobba hos oss</a>
+            <a href="#kontakt" class="top-box">Kontakt</a>
+        </div>
 
         <a href="#kontakt" class="btn-primary">Boka möte ▸</a>
     </div>
@@ -259,8 +277,8 @@
             <div class="eyebrow">För kvinnor</div>
             <h1>Trygg hjälp i hemmet av en annan kvinna</h1>
             <p>
-                Vi erbjuder personlig och pålitlig service i vardagen. 
-                Samma person kommer varje gång och hjälper med städning, 
+                Vi erbjuder personlig och pålitlig service i vardagen.
+                Samma person kommer varje gång och hjälper med städning,
                 lagar enkel mat och ger mänskligt sällskap.
             </p>
             <div class="hero-actions">
@@ -299,6 +317,17 @@
                 <p>Vi lagar vardagsmat tillsammans eller förbereder måltider.</p>
             </article>
         </div>
+    </section>
+
+    <!-- Placeholder för dina andra sektioner -->
+    <section id="trygghet">
+        <h2 class="section-title">Trygghet</h2>
+        <p class="section-lead">Här kan du senare lägga in trygghetstext, försäkring, bakgrund och hur ni jobbar.</p>
+    </section>
+
+    <section id="jobb">
+        <h2 class="section-title">Jobba hos oss</h2>
+        <p class="section-lead">Här kan du senare lägga in ansökan, krav, kontakt och hur man söker jobb.</p>
     </section>
 
     <section id="kontakt">
